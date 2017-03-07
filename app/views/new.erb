@@ -1,19 +1,19 @@
 <html>
   <head>
-    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="<%= url('/style.css') %>" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
   </head>
   <body>
     <form action='/links' method='post'>
       <p>
         Title:
-        <input type='text' name='title'>
+        <input class="field" type='text' name='title'>
       </p>
       <p>
         URL:
-        <input type='text' name='url'>
+        <input class="field" type='text' name='url'>
       </p>
-      <input type='submit' value='Submit' name='Submit'>
+      <input class="button" type='submit' value='Submit' name='Submit'>
     </form>
   </body>
 </html>

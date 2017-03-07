@@ -3,3 +3,14 @@ p, ul {
   font-family: Gudea;
   line-height: 30px;
 }
+
+.field {
+  line-height: 20px;
+  font-size: 20px;
+}
+
+.button {
+  border: 1px solid black;
+  font-size: 25px;
+  background-color: white;
+}

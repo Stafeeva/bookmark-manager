@@ -13,4 +13,12 @@ p, ul {
   border: 1px solid black;
   font-size: 25px;
   background-color: white;
+  text-decoration: none;
+  padding: 5px;
+  font-family: Gudea;
+  color: black;
 }
+
+/*a.button {
+  text-decoration: none;
+}*/

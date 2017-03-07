@@ -21,6 +21,7 @@ require 'rspec'
 require 'capybara'
 require 'capybara/rspec'
 require './app'
+require './app/models/link'
 
 Capybara.app = BookmarkManager
 

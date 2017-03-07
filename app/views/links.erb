@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Gudea" rel="stylesheet">
+  </head>
+  <body>
+    <p>Hi there! Your Bookmarks:</p>
+    <ul>
+      <% @link.each do |link|%>
+      <li><%= link.title %></li>
+      <% end %>
+    </ul>
+  </body>
+</html>

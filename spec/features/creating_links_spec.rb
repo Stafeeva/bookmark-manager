@@ -1,4 +1,3 @@
-
 feature 'create link' do
 
   scenario 'user can add a link' do

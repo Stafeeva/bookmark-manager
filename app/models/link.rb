@@ -4,10 +4,24 @@ require 'dm-postgres-adapter'
 class Link
 
   include DataMapper::Resource
+
   property :id, Serial
   property :title, String
   property :url, String
   property :time, DateTime
+
+  has n, :tags, :through => Resource
+
+end
+
+class Tag
+
+  include DataMapper::Resource
+
+  property :id, Serial
+  property :tag, String
+
+  has n, :links, :through => Resource
 end
 
 DataMapper::Logger.new($stdout, :debug)

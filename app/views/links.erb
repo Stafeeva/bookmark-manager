@@ -7,7 +7,9 @@
     <p>Hi there! Your Bookmarks:</p>
     <ul>
       <% @link.each do |link|%>
-      <li><%= link.title %>: <a href='<%= link.url %>'><%= link.url %></a></li>
+      <li><%= link.title %>: <a href='<%= link.url %>'><%= link.url %></a>
+        <br />
+      Tags: <%= link.tags %></li>
       <% end %>
     </ul>
     <a href='/links/new' class='button'>Add link</a>

@@ -3,7 +3,7 @@ ENV['RACK_ENV'] ||= 'development'
 require 'sinatra/base'
 require 'data_mapper'
 require 'dm-postgres-adapter'
-require_relative './models/link'
+require_relative './models/data_mapper_setup'
 
 class BookmarkManager < Sinatra::Base
 
@@ -22,6 +22,12 @@ class BookmarkManager < Sinatra::Base
     link.tags << tag
     link.save
     redirect '/links'
+  end
+
+  get '/tags/bubbles' do
+    @link = Link.get(:tag => 'bubbles')
+    p @link
+    "test"
   end
 
   run! if app_file == $0

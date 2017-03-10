@@ -18,4 +18,16 @@ feature "tag" do
     expect(page).to have_content('BBC')
     expect(page).not_to have_content('Google')
   end
+
+  scenario "user can add multiple tags" do
+    visit '/links'
+    click_link 'Add link'
+    fill_in 'title', with: 'BBC'
+    fill_in 'url', with: 'http://www.bbc.co.uk/news'
+    fill_in 'tags', with: 'news, uk, read'
+    click_button 'Submit'
+    link = Link.first
+    expect(link.tags.count).to eq 3
+  end
+
 end

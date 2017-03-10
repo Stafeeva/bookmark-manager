@@ -9,7 +9,10 @@
       <% @link.each do |link|%>
       <li><%= link.title %>: <a href='<%= link.url %>'><%= link.url %></a>
         <br />
-      Tags: <%= link.tags %></li>
+        Tags: <% link.tags.each do |tag| %>
+        <%= tag.name %>
+        <% end %>
+      </li>
       <% end %>
     </ul>
     <a href='/links/new' class='button'>Add link</a>
